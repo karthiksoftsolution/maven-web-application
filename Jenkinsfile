@@ -21,6 +21,7 @@ sh "${mavenHome}/bin/mvn clean package"
 stage('sonarqubereport'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
+  
 stage('uploadartifacts'){
 sh "${mavenHome}/bin/mvn deploy"
 }
